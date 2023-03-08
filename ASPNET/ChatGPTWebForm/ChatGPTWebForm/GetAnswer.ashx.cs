@@ -36,6 +36,8 @@ namespace ChatGPTWebForm
             string result = "";
             try
             {
+
+                System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
                 req.Method = "POST";
                 req.ContentType = "text/plain;charset=UTF-8";

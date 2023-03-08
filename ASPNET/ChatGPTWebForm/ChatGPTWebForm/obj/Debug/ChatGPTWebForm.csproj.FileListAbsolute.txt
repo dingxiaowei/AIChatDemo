@@ -49,7 +49,6 @@ D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\roslyn\VBCSC
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\roslyn\VBCSCompiler.exe.config
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.csprojAssemblyReference.cache
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.csproj.CoreCompileInputs.cache
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.csproj.CopyComplete
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.dll
