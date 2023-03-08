@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://www.pmzhang.cn/ -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/svg+xml" href="http://dingxiaowei.cn">
+		<meta name="generator" content="Astro v2.0.15">
+		<title>AI聊天机器人</title>
+		<script type="text/javascript">
+		var area;
+        var start = function () {
+            var inc = document.getElementById('incomming');
+            var wsImpl = window.WebSocket || window.MozWebSocket;
+            area = document.getElementById('textArea');
+            var sendBtn = document.getElementById('sendText');
+            
+            inc.innerHTML += "connecting to server ..<br/>";
+
+            // create a new websocket and connect
+            window.ws = new wsImpl('ws://116.205.247.142:8081/');
+
+            // when data is comming from the server, this metod is called
+            ws.onmessage = function (evt) {
+                inc.innerHTML += evt.data + '<br/>';
+            };
+
+            // when the connection is established, this method is called
+            ws.onopen = function () {
+                inc.innerHTML += '.. connection open<br/>';
+            };
+
+            // when the connection is closed, this method is called
+            ws.onclose = function () {
+                inc.innerHTML += '.. connection closed<br/>';
+            }
+            
+			form.addEventListener('submit', function(e){
+				e.preventDefault();
+				var val = area.value;
+				ws.send(val);
+				area.value = "";
+			});
+        }
+		
+		function btn() {
+			var val = area.value;
+			window.ws.send(val);
+			area.value = "";
+		}
+		
+        window.onload = start;
+    </script>
+	<link rel="stylesheet" href="./CSS/index.0ec88519.css"><style>hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__{border: 1px dotted}</style></head>
+	<body>
+		<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).load=a=>{(async()=>await(await a())())()},window.dispatchEvent(new Event("astro:load"));var l;{const c={0:t=>t,1:t=>JSON.parse(t,o),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,o)),5:t=>new Set(JSON.parse(t,o)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},o=(t,s)=>{if(t===""||!Array.isArray(s))return s;const[e,n]=s;return e in c?c[e](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(l=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement&&this.parentElement.closest("astro-island[ssr]"))return;const s=this.querySelectorAll("astro-slot"),e={},n=this.querySelectorAll("template[data-astro-template]");for(const r of n){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(const r of s){const i=r.closest(this.tagName);!i||!i.isSameNode(this)||(e[r.getAttribute("name")||"default"]=r.innerHTML)}const a=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),o):{};this.hydrator(this)(this.Component,a,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((s,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate);let s=this.getAttribute("before-hydration-url");s&&await import(s),this.start()}start(){const s=JSON.parse(this.getAttribute("opts")),e=this.getAttribute("client");if(Astro[e]===void 0){window.addEventListener(`astro:${e}`,()=>this.start(),{once:!0});return}Astro[e](async()=>{const n=this.getAttribute("renderer-url"),[a,{default:r}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),i=this.getAttribute("component-export")||"default";if(!i.includes("."))this.Component=a[i];else{this.Component=a;for(const d of i.split("."))this.Component=this.Component[d]}return this.hydrator=r,this.hydrate},s,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},l.observedAttributes=["props"],l))}</script><main>
+    <header>
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32"><g fill="none"><path fill="#F8312F" d="M5 3.5a1.5 1.5 0 0 1-1 1.415V12l2.16 5.487L4 23c-1.1 0-2-.9-2-1.998v-7.004a2 2 0 0 1 1-1.728V4.915A1.5 1.5 0 1 1 5 3.5Zm25.05.05c0 .681-.44 1.26-1.05 1.468V12.2c.597.347 1 .994 1 1.73v7.01c0 1.1-.9 2-2 2l-2.94-5.68L28 11.93V5.018a1.55 1.55 0 1 1 2.05-1.468Z"></path><path fill="#FFB02E" d="M11 4.5A1.5 1.5 0 0 1 12.5 3h7a1.5 1.5 0 0 1 .43 2.938c-.277.082-.57.104-.847.186l-3.053.904l-3.12-.908c-.272-.08-.56-.1-.832-.18A1.5 1.5 0 0 1 11 4.5Z"></path><path fill="#CDC4D6" d="M22.05 30H9.95C6.66 30 4 27.34 4 24.05V12.03C4 8.7 6.7 6 10.03 6h11.95C25.3 6 28 8.7 28 12.03v12.03c0 3.28-2.66 5.94-5.95 5.94Z"></path><path fill="#212121" d="M9.247 18.5h13.506c2.33 0 4.247-1.919 4.247-4.25A4.257 4.257 0 0 0 22.753 10H9.247A4.257 4.257 0 0 0 5 14.25a4.257 4.257 0 0 0 4.247 4.25Zm4.225 7.5h5.056C19.34 26 20 25.326 20 24.5s-.66-1.5-1.472-1.5h-5.056C12.66 23 12 23.674 12 24.5s.66 1.5 1.472 1.5Z"></path><path fill="#00A6ED" d="M10.25 12C9.56 12 9 12.56 9 13.25v2.5a1.25 1.25 0 1 0 2.5 0v-2.5c0-.69-.56-1.25-1.25-1.25Zm11.5 0c-.69 0-1.25.56-1.25 1.25v2.5a1.25 1.25 0 1 0 2.5 0v-2.5c0-.69-.56-1.25-1.25-1.25Z"></path></g></svg>
+  <div class="flex items-center mt-2">
+    <span class="text-2xl text-slate font-extrabold mr-1">AI聊天机器人</span>
+  </div>
+</header>
+    <astro-island uid="xsPeu" data-solid-render-id="s0" component-url="/_astro/Generator.487fe976.js" component-export="default" renderer-url="/_astro/client.025cf205.js" props="{}" client="load" opts="{&quot;name&quot;:&quot;Generator&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" my-6=""><!--#--><div data-hk="s00-1-0" class="my-4"><!--#--><span data-hk="s00-1-1-1-0" class="inline-flex items-center justify-center gap-1 text-sm text-slate bg-slate/20 px-2 py-1 rounded-md transition-colors cursor-pointer hover:bg-slate/50"><!--#--><svg data-hk="s00-1-1-1-1-0" xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 32 32"><path fill="currentColor" d="M30 15h-2.05A12.007 12.007 0 0 0 17 4.05V2h-2v2.05A12.007 12.007 0 0 0 4.05 15H2v2h2.05A12.007 12.007 0 0 0 15 27.95V30h2v-2.05A12.007 12.007 0 0 0 27.95 17H30ZM17 25.95V22h-2v3.95A10.017 10.017 0 0 1 6.05 17H10v-2H6.05A10.017 10.017 0 0 1 15 6.05V10h2V6.05A10.017 10.017 0 0 1 25.95 15H22v2h3.95A10.017 10.017 0 0 1 17 25.95Z"></path></svg><!--/--></span><!--/--><!--#--><!--/--></div><!--/--><!--#--><!--/--><!--#--><!--/--><!--#--><div data-hk="s00-3-0" class="my-4 flex items-center gap-2 transition-opacity "><textarea id="textArea" placeholder="Enter something..." autocomplete="off" autofocus="" rows="1" w-full="" px-3="" py-3="" min-h-12="" max-h-36="" text-slate="" rounded-sm="" bg-slate="" bg-op-15="" resize-none="" focus:bg-op-20="" focus:ring-0="" focus:outline-none="" placeholder:text-slate-400="" placeholder:op-30="" scroll-pa-8px=""></textarea><button id="sendText" onclick='btn()' h-12="" px-4="" py-2="" bg-slate="" bg-op-15="" hover:bg-op-20="" text-slate="" rounded-sm="">Send</button><button title="Clear" h-12="" px-4="" py-2="" bg-slate="" bg-op-15="" hover:bg-op-20="" text-slate="" rounded-sm=""><svg data-hk="s00-3-1-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 20v-5h2v5h9v-7H5v7h3zm-4-9h16V8h-6V4h-4v4H4v3zM3 21v-8H2V7a1 1 0 0 1 1-1h5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3h5a1 1 0 0 1 1 1v6h-1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg></button></div><!--/--></div></astro-island>
+    <footer op-60="">
+    <p mt-6="" text-sm="" text-slate="">
+	<pre id="incomming"></pre>
+	<br/>
+	<br/>
+	<br/>
+    <span pr-1="">Made by</span>
+    <a border-b="" border-slate="" border-none="" hover:border-dashed="" href="http://dingxiaowei.cn/" target="_blank">
+      阿拉丁
+    </a>
+  </p>
+</footer>
+</main>
+</body><div style="all: initial;"><div id="__hcfy__" style="all: initial;"></div></div></html>
