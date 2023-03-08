@@ -24,7 +24,8 @@
                                 alert(data);
                             }
                             else {
-                                inc.innerHTML += '<br/>答案:<br/>' + data.trim() + '<br/>';
+                                var newdata = data.trim();
+                                inc.innerHTML += '<br/>答案:<br/>' + newdata + '<br/>';
                             }
                         }
                     });
