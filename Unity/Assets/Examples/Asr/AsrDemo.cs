@@ -2,6 +2,8 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using Crosstales.RTVoice;
+using Crosstales.RTVoice.Model;
 
 namespace BaiduSpeech.Examples
 {
@@ -15,6 +17,55 @@ namespace BaiduSpeech.Examples
         public Text stateText;
 
         private BaiduSpeechManager m_BaiduSpeechManager;
+
+        public string Text = "你好，Hello world, I am RT-Voice!";
+        public string Culture = "zh"; //en
+        public bool SpeakWhenReady;
+        private string uid; //Unique id of the speech
+
+        private void OnEnable()
+        {
+            // Subscribe event listeners
+            Speaker.Instance.OnVoicesReady += voicesReady;
+            Speaker.Instance.OnSpeakStart += speakStart;
+            Speaker.Instance.OnSpeakComplete += speakComplete;
+        }
+
+        private void OnDisable()
+        {
+            if (Speaker.Instance != null)
+            {
+                // Unsubscribe event listeners
+                Speaker.Instance.OnVoicesReady -= voicesReady;
+                Speaker.Instance.OnSpeakStart -= speakStart;
+                Speaker.Instance.OnSpeakComplete -= speakComplete;
+            }
+        }
+
+        public void Speak(string text)
+        {
+            uid = Speaker.Instance.Speak(text, null, Speaker.Instance.VoiceForCulture(Culture)); //Speak with the first voice matching the given culture
+        }
+
+        private void voicesReady()
+        {
+            Debug.Log($"RT-Voice: {Speaker.Instance.Voices.Count} voices are ready to use!");
+
+            if (SpeakWhenReady) //Speak after the voices are ready
+                Speak(Text);
+        }
+
+        private void speakStart(Wrapper wrapper)
+        {
+            if (wrapper.Uid == uid) //Only write the log message if it's "our" speech
+                Debug.Log($"RT-Voice: speak started: {wrapper}");
+        }
+
+        private void speakComplete(Wrapper wrapper)
+        {
+            if (wrapper.Uid == uid) //Only write the log message if it's "our" speech
+                Debug.Log($"RT-Voice: speak completed: {wrapper}");
+        }
 
         private void Start()
         {
@@ -60,9 +111,9 @@ namespace BaiduSpeech.Examples
             else
             {
                 string receiveContent = request.downloadHandler.text.Trim();
-                Debug.LogError(receiveContent);
+                Debug.Log(receiveContent);
                 content.text += "答案:" + receiveContent + "\n";
-
+                Speak(receiveContent);
             }
         }
 
@@ -105,7 +156,7 @@ namespace BaiduSpeech.Examples
                 {
                     for (int i = 0; i < asrParams.results_recognition.Length; i++)
                     {
-                        content.text += "Question:" + asrParams.results_recognition[i] + "\n";
+                        content.text += "问题:" + asrParams.results_recognition[i] + "\n";
                         StartCoroutine(GetAnswer(asrParams.results_recognition[i]));
                     }
                 }
