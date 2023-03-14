@@ -24,7 +24,8 @@
                                 alert(data);
                             }
                             else {
-                                inc.innerHTML += '<br/>答案:<br/>' + data.trim() + '<br/>';
+                                var newdata = data.trim();
+                                inc.innerHTML += '<br/>答案:<br/>' + newdata + '<br/>';
                             }
                         }
                     });
@@ -82,14 +83,13 @@
         <astro-island uid="xsPeu" data-solid-render-id="s0" component-url="/_astro/Generator.487fe976.js" component-export="default" renderer-url="/_astro/client.025cf205.js" props="{}" client="load" opts="{&quot;name&quot;:&quot;Generator&quot;,&quot;value&quot;:true}" await-children=""><div data-hk="s00-0" my-6=""><!--#--><div data-hk="s00-1-0" class="my-4"><!--#--><span data-hk="s00-1-1-1-0" class="inline-flex items-center justify-center gap-1 text-sm text-slate bg-slate/20 px-2 py-1 rounded-md transition-colors cursor-pointer hover:bg-slate/50"><!--#--><svg data-hk="s00-1-1-1-1-0" xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 32 32"><path fill="currentColor" d="M30 15h-2.05A12.007 12.007 0 0 0 17 4.05V2h-2v2.05A12.007 12.007 0 0 0 4.05 15H2v2h2.05A12.007 12.007 0 0 0 15 27.95V30h2v-2.05A12.007 12.007 0 0 0 27.95 17H30ZM17 25.95V22h-2v3.95A10.017 10.017 0 0 1 6.05 17H10v-2H6.05A10.017 10.017 0 0 1 15 6.05V10h2V6.05A10.017 10.017 0 0 1 25.95 15H22v2h3.95A10.017 10.017 0 0 1 17 25.95Z"></path></svg><!--/--></span><!--/--><!--#--><!--/--></div><!--/--><!--#--><!--/--><!--#--><!--/--><!--#--><div data-hk="s00-3-0" class="my-4 flex items-center gap-2 transition-opacity "><textarea id="textArea" placeholder="Enter something..." autocomplete="off" autofocus="" rows="1" w-full="" px-3="" py-3="" min-h-12="" max-h-36="" text-slate="" rounded-sm="" bg-slate="" bg-op-15="" resize-none="" focus:bg-op-20="" focus:ring-0="" focus:outline-none="" placeholder:text-slate-400="" placeholder:op-30="" scroll-pa-8px=""></textarea><button id="sendText" onclick='btn()' h-12="" px-4="" py-2="" bg-slate="" bg-op-15="" hover:bg-op-20="" text-slate="" rounded-sm="">Send</button><button title="Clear" h-12="" px-4="" py-2="" bg-slate="" bg-op-15="" hover:bg-op-20="" text-slate="" rounded-sm=""><svg data-hk="s00-3-1-0" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M8 20v-5h2v5h9v-7H5v7h3zm-4-9h16V8h-6V4h-4v4H4v3zM3 21v-8H2V7a1 1 0 0 1 1-1h5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3h5a1 1 0 0 1 1 1v6h-1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg></button></div><!--/--></div></astro-island>
         <footer op-60="">
             <p mt-6="" text-sm="" text-slate="">
-                <pre id="incomming" style="width:500px"></pre>
+                <div id="incomming" style="width:600px"></div>
                 <br />
                 <br />
                 <br />
-                <span pr-1="">Made by</span>
-                <a border-b="" border-slate="" border-none="" hover:border-dashed="" href="http://dingxiaowei.cn/" target="_blank">
-                    阿拉丁
-                </a>
+                <span pr-1="">Made by Aladdin</span>
+                <br />
+                <span pr-1="">Supported by ChatGPT</span>
             </p>
         </footer>
     </main>
