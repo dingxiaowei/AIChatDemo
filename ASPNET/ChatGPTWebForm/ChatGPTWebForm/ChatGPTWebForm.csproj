@@ -71,7 +71,9 @@
     <Content Include="index.html" />
     <Content Include="Models\index.css" />
     <Content Include="Models\jquery-3.3.1.min.js" />
+    <Content Include="video.html" />
     <Content Include="Web.config" />
+    <Content Include="webrtc.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GetAnswer.ashx.cs">
@@ -80,10 +82,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="GetAnswer.ashx" />
+    <Content Include="Handler1.ashx" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">

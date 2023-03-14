@@ -53,3 +53,4 @@ D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGP
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.csproj.CopyComplete
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.dll
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.pdb
+D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.csproj.AssemblyReference.cache

@@ -7,13 +7,15 @@
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <_PublishTargetUrl>D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\Release\Publish</_PublishTargetUrl>
+    <History>True|2023-03-13T13:17:41.3405884Z;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/ChatGPTWebForm.dll">
-      <publishTime>03/08/2023 19:12:29</publishTime>
+      <publishTime>03/13/2023 21:27:57</publishTime>
     </File>
     <File Include="bin/ChatGPTWebForm.pdb">
-      <publishTime>03/08/2023 19:12:29</publishTime>
+      <publishTime>03/13/2023 21:27:57</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 13:38:22</publishTime>
@@ -162,6 +164,9 @@
     <File Include="Global.asax">
       <publishTime>03/08/2023 15:28:42</publishTime>
     </File>
+    <File Include="Handler1.ashx">
+      <publishTime>03/13/2023 21:14:15</publishTime>
+    </File>
     <File Include="index.html">
       <publishTime>03/08/2023 16:41:03</publishTime>
     </File>
@@ -171,8 +176,14 @@
     <File Include="Models/jquery-3.3.1.min.js">
       <publishTime>10/25/2022 17:49:09</publishTime>
     </File>
+    <File Include="video.html">
+      <publishTime>03/13/2023 21:16:48</publishTime>
+    </File>
     <File Include="Web.config">
       <publishTime>03/08/2023 19:12:29</publishTime>
+    </File>
+    <File Include="webrtc.js">
+      <publishTime>03/13/2023 21:27:47</publishTime>
     </File>
   </ItemGroup>
 </Project>

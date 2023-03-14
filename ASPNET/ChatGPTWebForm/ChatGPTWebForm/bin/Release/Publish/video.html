@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>webrtc</title>
+    <script src="webrtc.js"></script>
+    <style>
+        #yours {
+            width: 200px;
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+
+        #theirs {
+            width: 600px;
+            position: absolute;
+            top: 50px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="createOffer()">建立连接</button>
+    <video id="yours" autoplay controls="controls"></video>
+    <video id="theirs" autoplay controls="controls"></video>
+
+</body>
+
+</html>
