@@ -15,6 +15,7 @@ namespace BaiduSpeech.Examples
         public Text volumeText;
         public Text volumeText2;
         public Text stateText;
+        public AudioSource audioSource;
 
         private BaiduSpeechManager m_BaiduSpeechManager;
 
@@ -44,7 +45,7 @@ namespace BaiduSpeech.Examples
 
         public void Speak(string text)
         {
-            uid = Speaker.Instance.Speak(text, null, Speaker.Instance.VoiceForCulture(Culture)); //Speak with the first voice matching the given culture
+            uid = Speaker.Instance.Speak(text, audioSource, Speaker.Instance.VoiceForCulture(Culture)); //Speak with the first voice matching the given culture
         }
 
         private void voicesReady()
