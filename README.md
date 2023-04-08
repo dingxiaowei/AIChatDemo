@@ -1,5 +1,5 @@
 # AIChatDemo
-AI聊天机器人
+基于ChatGPT的AI聊天机器人
 
 ## 效果
 ![](Img/效果.png)
