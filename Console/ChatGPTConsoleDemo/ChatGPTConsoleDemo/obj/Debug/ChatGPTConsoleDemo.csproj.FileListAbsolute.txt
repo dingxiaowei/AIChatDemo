@@ -1,7 +1,10 @@
 D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\bin\Debug\ChatGPTConsoleDemo.exe.config
 D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\bin\Debug\ChatGPTConsoleDemo.exe
 D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\bin\Debug\ChatGPTConsoleDemo.pdb
-D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\obj\Debug\ChatGPTConsoleDemo.csprojAssemblyReference.cache
 D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\obj\Debug\ChatGPTConsoleDemo.csproj.CoreCompileInputs.cache
 D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\obj\Debug\ChatGPTConsoleDemo.exe
 D:\study\github\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\obj\Debug\ChatGPTConsoleDemo.pdb
+D:\Study\GitHub\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\obj\Debug\ChatGPTConsoleDemo.csproj.AssemblyReference.cache
+D:\Study\GitHub\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\bin\Debug\Newtonsoft.Json.dll
+D:\Study\GitHub\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\bin\Debug\Newtonsoft.Json.xml
+D:\Study\GitHub\AIChatDemo\Console\ChatGPTConsoleDemo\ChatGPTConsoleDemo\obj\Debug\ChatGPTConsoleDemo.csproj.CopyComplete

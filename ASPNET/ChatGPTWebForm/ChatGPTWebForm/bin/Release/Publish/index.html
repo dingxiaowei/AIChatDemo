@@ -16,7 +16,7 @@
                 if (!(question == null || question == '')) {
                     $.ajax({
                         type: "POST",
-                        url: "GetAnswer.ashx?question=" + question,
+                        url: "GetAnswerByDS.ashx?question=" + question,
                         data: String,
                         success: function (data) {
                             area.value = '';
@@ -24,7 +24,8 @@
                                 alert(data);
                             }
                             else {
-                                inc.innerHTML += '<br/>答案:<br/>' + data.trim() + '<br/>';
+                                var newdata = data.trim();
+                                inc.innerHTML += '<br/>答案:<br/>' + newdata + '<br/>';
                             }
                         }
                     });
@@ -88,7 +89,7 @@
                 <br />
                 <span pr-1="">Made by Aladdin</span>
                 <br />
-                <span pr-1="">Supported by ChatGPT</span>
+                <span pr-1="">Supported by DeepSeek</span>
             </p>
         </footer>
     </main>

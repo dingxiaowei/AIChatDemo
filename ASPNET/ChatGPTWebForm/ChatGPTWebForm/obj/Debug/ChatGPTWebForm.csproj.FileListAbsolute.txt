@@ -54,3 +54,10 @@ D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGP
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.dll
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.pdb
 D:\study\github\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\obj\Debug\ChatGPTWebForm.csproj.AssemblyReference.cache
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\Newtonsoft.Json.dll
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\System.Net.Http.dll
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\System.Security.Cryptography.Algorithms.dll
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\System.Security.Cryptography.Encoding.dll
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\System.Security.Cryptography.Primitives.dll
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\System.Security.Cryptography.X509Certificates.dll
+D:\Study\GitHub\AIChatDemo\ASPNET\ChatGPTWebForm\ChatGPTWebForm\bin\Newtonsoft.Json.xml

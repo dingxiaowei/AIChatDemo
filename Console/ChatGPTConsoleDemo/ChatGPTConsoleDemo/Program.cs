@@ -1,53 +1,73 @@
 ﻿using System;
-using System.IO;
-using System.Net;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-namespace ChatGPTConsoleDemo
+// 定义请求数据结构 
+class ChatRequest
 {
-    class Program
+    public string model { get; set; } = "deepseek-chat";
+    public Message[] messages { get; set; }
+    public bool stream { get; set; } = false;
+}
+
+class Message
+{
+    public string role { get; set; }
+    public string content { get; set; }
+}
+
+// 定义响应数据结构 
+class ChatResponse
+{
+    public Choice[] choices { get; set; }
+}
+
+class Choice
+{
+    public Message message { get; set; }
+}
+
+class Program
+{
+    static async Task Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine(GetAnswer("海安"));
-            Console.Read();
-        }
+        Console.WriteLine("开始");
 
-        public static string GetAnswer(string question)
-        {
-            return PostJson("https://www.pmzhang.cn/api/generate", "{\"messages\":[{\"role\":\"user\",\"content\":\"" + question + "\"}]}");
-        }
+        var client = new HttpClient();
+        client.BaseAddress = new Uri("https://api.deepseek.com");
+        client.DefaultRequestHeaders.Add("Authorization", "Bearer sk-493cc716c17e4860a82d4e3c633493d0");
 
-        public static string PostJson(string url, string postJsonData)
+        var request = new ChatRequest
         {
-            string result = "";
-            try
+            messages = new[]
             {
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-                req.Method = "POST";
-                req.ContentType = "text/plain;charset=UTF-8";
-                req.Accept = "*/*";
-                var data = Encoding.UTF8.GetBytes(postJsonData);
-                req.ContentLength = data.Length;
-                using (Stream reqStream = req.GetRequestStream())
+                new Message
                 {
-                    reqStream.Write(data, 0, data.Length);
-                    reqStream.Close();
+                    role = "system",
+                    content = "介绍一下C#"
                 }
-                var resp = (HttpWebResponse)req.GetResponse();
-                var stream = resp.GetResponseStream();
+            }
+        };
 
-                using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
-                {
-                    result = reader.ReadToEnd();
-                }
-                return result;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Post异常:" + ex.ToString());
-            }
-            return "";
+        var json = JsonConvert.SerializeObject(request);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        var response = await client.PostAsync("/v1/chat/completions", content);
+        var responseString = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("准备打印");
+        if (response.IsSuccessStatusCode)
+        {
+            var result = JsonConvert.DeserializeObject<ChatResponse>(responseString);
+            Console.WriteLine(result?.choices?[0].message.content);
+            Console.WriteLine("已经打印了");
         }
+        else
+        {
+            Console.WriteLine($"请求失败: {response.StatusCode}");
+            Console.WriteLine(responseString);
+        }
+        Console.Read();
     }
 }
